@@ -15,12 +15,9 @@ distance3 = gets.to_f
 puts "How long (in minutes) did person 3 take to run #{distance3} metres?"
 mins3 = gets.to_f
 
-secs1 = mins1 * 60
-speed1 = distance1/secs1
-secs2 = mins2 * 60
-speed2 = distance2/secs2
-secs3 = mins3 * 60
-speed3 = distance3/secs3
+def speed(distance, minutes)
+  distance / (minutes * 60)
+end
 
 if speed3 > speed2 && speed3 > speed1
   puts "Person 3 was the fastest at #{speed3} m/s"
